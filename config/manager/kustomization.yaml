@@ -5,4 +5,4 @@ kind: Kustomization
 images:
 - name: controller
   newName: csantanapr/cronjobcontroller
-  newTag: v1.0.0
+  newTag: local
