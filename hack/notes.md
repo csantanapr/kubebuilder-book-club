@@ -5,6 +5,5 @@ make undeploy
 
 # For local dev on kind
 make docker-build docker-push IMG=csantanapr/cronjobcontroller:local
-docker images
 kind load docker-image cronjobcontroller:local --name kind
 make deploy IMG=csantanapr/cronjobcontroller:local
