@@ -1,0 +1,19 @@
+## Install Prometheus Operator CRDs
+##
+crds:
+  enabled: true
+
+## Deploy a Prometheus instance
+##
+prometheus:
+  enabled: true
+
+  ## Settings affecting prometheusSpec
+  ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#prometheusspec
+  ##
+  prometheusSpec:
+
+    serviceMonitorSelectorNilUsesHelmValues: false
+
+    podMonitorSelectorNilUsesHelmValues: false
+

@@ -5,6 +5,8 @@
 domain: tutorial.kubebuilder.io
 layout:
 - go.kubebuilder.io/v4
+plugins:
+  grafana.kubebuilder.io/v1-alpha: {}
 projectName: kubebuilder-book-club
 repo: tutorial.kubebuilder.io/project
 resources:
@@ -21,4 +23,12 @@ resources:
     defaulting: true
     validation: true
     webhookVersion: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: tutorial.kubebuilder.io
+  group: batch
+  kind: CronJob
+  path: tutorial.kubebuilder.io/project/api/v2
+  version: v2
 version: "3"
