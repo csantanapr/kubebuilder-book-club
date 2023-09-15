@@ -17,3 +17,7 @@ helm upgrade --install --wait --timeout 15m \
   -f values.yaml
 
 kubectl port-forward -n kubebuilder-book-club-system svc/kube-prometheus-stack-prometheus 8080:9090
+kubectl port-forward -n kubebuilder-book-club-system svc/kube-prometheus-stack-grafana 8080:80
+
+Grafana username/password
+admin:prom-operator
