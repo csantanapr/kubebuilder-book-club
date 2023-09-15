@@ -121,7 +121,7 @@ var _ = Describe("CronJob controller", func() {
 				return true
 			}, timeout, interval).Should(BeTrue())
 			// Let's make sure our Schedule string value was properly converted/handled.
-			Expect(createdCronjob.Spec.Schedule).Should(Equal("1 * *"))
+			Expect(createdCronjob.Spec.Schedule).Should(Equal("1 * * * *"))
 			/*
 				Now that we've created a CronJob in our test cluster, the next step is to write a test that actually tests our CronJob controller’s behavior.
 				Let’s test the CronJob controller’s logic responsible for updating CronJob.Status.Active with actively running jobs.
