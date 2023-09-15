@@ -48,6 +48,9 @@ spec:
                       backoffLimit:
                         format: int32
                         type: integer
+                      backoffLimitPerIndex:
+                        format: int32
+                        type: integer
                       completionMode:
                         type: string
                       completions:
@@ -55,6 +58,9 @@ spec:
                         type: integer
                       manualSelector:
                         type: boolean
+                      maxFailedIndexes:
+                        format: int32
+                        type: integer
                       parallelism:
                         format: int32
                         type: integer
@@ -103,6 +109,8 @@ spec:
                         required:
                         - rules
                         type: object
+                      podReplacementPolicy:
+                        type: string
                       selector:
                         properties:
                           matchExpressions:
@@ -936,6 +944,8 @@ spec:
                                             x-kubernetes-int-or-string: true
                                           type: object
                                       type: object
+                                    restartPolicy:
+                                      type: string
                                     securityContext:
                                       properties:
                                         allowPrivilegeEscalation:
@@ -1578,6 +1588,8 @@ spec:
                                             x-kubernetes-int-or-string: true
                                           type: object
                                       type: object
+                                    restartPolicy:
+                                      type: string
                                     securityContext:
                                       properties:
                                         allowPrivilegeEscalation:
@@ -2227,6 +2239,8 @@ spec:
                                             x-kubernetes-int-or-string: true
                                           type: object
                                       type: object
+                                    restartPolicy:
+                                      type: string
                                     securityContext:
                                       properties:
                                         allowPrivilegeEscalation:
