@@ -5,6 +5,8 @@
 domain: tutorial.kubebuilder.io
 layout:
 - go.kubebuilder.io/v4
+plugins:
+  grafana.kubebuilder.io/v1-alpha: {}
 projectName: kubebuilder-book-club
 repo: tutorial.kubebuilder.io/project
 resources:
